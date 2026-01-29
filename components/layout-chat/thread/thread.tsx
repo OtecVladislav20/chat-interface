@@ -1,6 +1,6 @@
 import { ThreadPrimitive } from "@assistant-ui/react";
 import { FC } from "react";
-import { ThreadViewport } from "../viewport/thread-viewport";
+import { ThreadViewport } from "../viewport";
 import styles from "./thread.module.scss";
 
 

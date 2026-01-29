@@ -1,9 +1,8 @@
-import { AssistantIf, ComposerPrimitive, MessagePrimitive, ThreadPrimitive } from "@assistant-ui/react";
+import { ThreadPrimitive } from "@assistant-ui/react";
 import { FC } from "react";
-import { UserMessage } from "./user-message/user-message";
-import { AssistantMessage } from "./assistant-message/assistant-message";
-import { Button } from "@/components/ui/button";
-import { EditComposer } from "./edit-composer/edit-composer";
+import { AssistantMessage } from "./assistant-message";
+import { EditComposer } from "./edit-composer";
+import { UserMessage } from "./user-message";
 
 
 export const Messages: FC = () => {

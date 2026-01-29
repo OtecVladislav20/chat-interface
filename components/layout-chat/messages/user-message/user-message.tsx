@@ -1,5 +1,5 @@
 import { UserMessageAttachments } from "@/components/assistant-ui/attachment";
-import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
+import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button/tooltip-icon-button";
 import { ActionBarPrimitive, MessagePrimitive } from "@assistant-ui/react";
 import { PencilIcon } from "lucide-react";
 import { FC } from "react";

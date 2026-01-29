@@ -1,7 +1,8 @@
-import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
+import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button/tooltip-icon-button";
 import { ThreadPrimitive } from "@assistant-ui/react";
 import { ArrowDownIcon } from "lucide-react";
 import { FC } from "react";
+import styles from "./thread-scroll-to-bottom.module.scss";
 
 
 export const ThreadScrollToBottom: FC = () => {
@@ -10,7 +11,7 @@ export const ThreadScrollToBottom: FC = () => {
       <TooltipIconButton
         tooltip="Scroll to bottom"
         variant="outline"
-        className="aui-thread-scroll-to-bottom absolute -top-12 z-10 self-center rounded-full p-4 disabled:invisible dark:bg-background dark:hover:bg-accent"
+        className={styles.button}
       >
         <ArrowDownIcon />
       </TooltipIconButton>

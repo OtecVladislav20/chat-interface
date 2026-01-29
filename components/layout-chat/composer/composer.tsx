@@ -1,5 +1,5 @@
 import { ComposerAddAttachment, ComposerAttachments } from "@/components/assistant-ui/attachment";
-import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
+import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button/tooltip-icon-button";
 import { Button } from "@/components/ui/button";
 import { AssistantIf, ComposerPrimitive } from "@assistant-ui/react";
 import { ArrowUpIcon, SquareIcon } from "lucide-react";

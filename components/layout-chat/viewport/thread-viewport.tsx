@@ -1,9 +1,9 @@
 import { AssistantIf, ThreadPrimitive } from "@assistant-ui/react";
 import { FC } from "react";
-import { ThreadWelcome } from "../welcome/thread-welcome";
-import { Messages } from "../messages/messages";
-import { ThreadScrollToBottom } from "../scroll-to-bottom/thread-scroll-to-bottom";
-import { Composer } from "../composer/composer";
+import { Composer } from "../composer";
+import { Messages } from "../messages";
+import { ThreadScrollToBottom } from "../scroll-to-bottom";
+import { ThreadWelcome } from "../welcome";
 import styles from "./thread-viewport.module.scss";
 
 

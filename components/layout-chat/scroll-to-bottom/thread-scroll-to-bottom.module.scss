@@ -1,0 +1,15 @@
+.button {
+    position: absolute;
+    top: -48px;
+
+    z-index: 10;
+
+    align-self: center;
+
+    border-radius: 9999px;
+    padding: 16px;
+}
+
+.button:disabled {
+    visibility: hidden;
+}
