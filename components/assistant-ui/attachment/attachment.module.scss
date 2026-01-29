@@ -1,0 +1,200 @@
+.previewImage {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.previewImageLoading {
+  visibility: hidden;
+}
+
+.previewImageLoaded {
+  visibility: visible;
+}
+
+.previewTrigger {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.previewTrigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dialogContent {
+  padding: 8px;
+  max-width: 768px;
+}
+
+.dialogTitleSrOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.previewContainer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  width: 100%;
+  max-height: 80dvh;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  background: #000;
+}
+
+.tileAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.tileImage {
+  object-fit: cover;
+}
+
+.tileFallbackIcon {
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.attachmentRoot {
+  position: relative;
+}
+
+.attachmentRootComposer:only-child #attachment-tile {
+  width: 96px;
+  height: 96px;
+}
+
+.tile {
+  width: 56px;
+  height: 56px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition: opacity 0.15s ease;
+}
+
+.tile:hover {
+  opacity: 0.75;
+}
+
+.tileComposer {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.removeButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 9999px;
+
+  background: #fff;
+  color: rgba(0, 0, 0, 0.6);
+
+  opacity: 1;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.removeButton:hover {
+  background: #fff;
+}
+
+.removeButton svg {
+  color: #000;
+}
+
+.removeButton:hover svg {
+  color: #ff4d4f;
+}
+
+.removeIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.userMessageAttachments {
+  grid-column: 1 / -1;
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+  display: flex;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+.composerAttachments {
+  margin-bottom: 8px;
+
+  display: flex;
+  width: 100%;
+
+  flex-direction: row;
+  align-items: center;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+
+.composerAttachments:empty {
+  display: none;
+}
+
+.addAttachmentButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+
+  padding: 4px;
+
+  font-weight: 600;
+  font-size: 12px;
+
+  transition: background-color 0.15s ease;
+}
+
+.addAttachmentButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.addAttachmentIcon {
+  width: 20px;
+  height: 20px;
+}

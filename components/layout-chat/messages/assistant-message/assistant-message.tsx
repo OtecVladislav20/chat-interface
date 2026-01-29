@@ -1,6 +1,6 @@
 import { MarkdownText } from "@/components/assistant-ui/markdown-text/markdown-text";
-import { Reasoning, ReasoningGroup } from "@/components/assistant-ui/reasoning";
-import { ToolFallback } from "@/components/assistant-ui/tool-fallback";
+import { Reasoning, ReasoningGroup } from "@/components/assistant-ui/reasoning/reasoning";
+import { ToolFallback } from "@/components/assistant-ui/tool-fallback/tool-fallback";
 import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button/tooltip-icon-button";
 import { ActionBarMorePrimitive, ActionBarPrimitive, AssistantIf, ErrorPrimitive, MessagePrimitive } from "@assistant-ui/react";
 import { CheckIcon, CopyIcon, DownloadIcon, MoreHorizontalIcon, PencilIcon, RefreshCwIcon } from "lucide-react";

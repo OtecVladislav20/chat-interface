@@ -1,0 +1,87 @@
+.root {
+  margin-bottom: 16px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.cancelled {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.icon {
+  color: #fff;
+}
+
+.iconMuted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.titleCancelled {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 8px;
+}
+
+.cancelledRoot {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.cancelledHeader {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cancelledReason {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.argsRoot {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.dimmed {
+  opacity: 0.6;
+}
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.resultRoot {
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+}
+
+.resultHeader {
+  font-weight: 600;
+}

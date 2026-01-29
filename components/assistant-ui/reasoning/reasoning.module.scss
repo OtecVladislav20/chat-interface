@@ -1,0 +1,190 @@
+.root {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.variantOutline {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+}
+
+.variantMuted {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 12px;
+}
+
+.trigger {
+  display: flex;
+  max-width: 75%;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.15s ease;
+}
+
+.trigger:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.shimmer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.25)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 1.2s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.chevron {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform var(--animation-duration) ease-out;
+}
+
+.trigger[data-state="closed"] .chevron {
+  transform: rotate(-90deg);
+}
+
+.trigger[data-state="open"] .chevron {
+  transform: rotate(0deg);
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.content[data-state="open"] {
+  animation: collapsibleDown var(--animation-duration) ease-out;
+}
+
+.content[data-state="closed"] {
+  animation: collapsibleUp var(--animation-duration) ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes collapsibleDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes collapsibleUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 0;
+  max-height: 256px;
+  overflow-y: auto;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  line-height: 1.625;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform var(--animation-duration) ease, opacity var(--animation-duration) ease;
+}
+
+.text p {
+  margin-bottom: -8px;
+}
+
+.content[data-state="open"] .text {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn var(--animation-duration) ease, slideInFromTop var(--animation-duration) ease;
+}
+
+.content[data-state="closed"] .text {
+  opacity: 0;
+  transform: translateY(-16px);
+  animation: fadeOut var(--animation-duration) ease, slideOutToTop var(--animation-duration) ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-16px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideOutToTop {
+  from { transform: translateY(0); }
+  to { transform: translateY(-16px); }
+}
+
+.fade {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 32px;
+  background: linear-gradient(to top, #000, transparent);
+  opacity: 1;
+  transition: opacity var(--animation-duration) ease;
+}
+
+.content[data-state="open"] .fade {
+  opacity: 0;
+  transition-delay: calc(var(--animation-duration) * 0.75);
+}

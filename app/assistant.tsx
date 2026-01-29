@@ -10,7 +10,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { ThreadListSidebar } from "@/components/assistant-ui/threadlist-sidebar";
+import { ThreadListSidebar } from "@/components/assistant-ui/threadlist-sidebar/threadlist-sidebar";
 import { Separator } from "@/components/ui/separator";
 import {
   Breadcrumb,

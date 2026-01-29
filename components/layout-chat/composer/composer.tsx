@@ -1,4 +1,4 @@
-import { ComposerAddAttachment, ComposerAttachments } from "@/components/assistant-ui/attachment";
+import { ComposerAddAttachment, ComposerAttachments } from "@/components/assistant-ui/attachment/attachment";
 import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button/tooltip-icon-button";
 import { Button } from "@/components/ui/button";
 import { AssistantIf, ComposerPrimitive } from "@assistant-ui/react";
