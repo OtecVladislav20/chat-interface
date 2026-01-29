@@ -1,0 +1,87 @@
+.root {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.dropzone {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+    background: #fff;
+
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 8px;
+
+    outline: none;
+
+    transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    background-color 0.15s ease;
+
+    &[data-dragging="true"] {
+        border-color: #5a67ff;
+        border-style: dashed;
+        background: rgba(90, 103, 255, 0.5);
+    }
+}
+
+.dropzone:has(textarea:focus-visible) {
+    border-color: #5a67ff;
+    box-shadow: 0 0 0 2px rgba(90, 103, 255, 0.2);
+}
+
+.input {
+    margin-bottom: 4px;
+
+    max-height: 128px;
+    min-height: 56px;
+    width: 100%;
+
+    resize: none;
+    background: transparent;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+
+    font-size: 14px;
+    outline: none;
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:focus-visible {
+        box-shadow: none;
+    }
+}
+
+.actions {
+    position: relative;
+
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sendButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+}
+
+.cancelButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+}

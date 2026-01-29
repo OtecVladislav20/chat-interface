@@ -5,7 +5,6 @@ import {
   useChatRuntime,
   AssistantChatTransport,
 } from "@assistant-ui/react-ai-sdk";
-import { Thread } from "@/components/assistant-ui/thread";
 import {
   SidebarInset,
   SidebarProvider,
@@ -21,6 +20,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Thread } from "@/components/layout-chat/thread/thread";
 
 export const Assistant = () => {
   const runtime = useChatRuntime({
@@ -32,7 +32,7 @@ export const Assistant = () => {
   return (
     <AssistantRuntimeProvider runtime={runtime}>
       <SidebarProvider>
-        <div className="flex h-dvh w-full pr-0.5">
+        {/* <div className="flex h-dvh w-full pr-0.5">
           <ThreadListSidebar />
           <SidebarInset>
             <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
@@ -60,7 +60,8 @@ export const Assistant = () => {
               <Thread />
             </div>
           </SidebarInset>
-        </div>
+        </div> */}
+        <Thread />
       </SidebarProvider>
     </AssistantRuntimeProvider>
   );

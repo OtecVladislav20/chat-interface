@@ -1,0 +1,62 @@
+.root {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--thread-max-width);
+
+    display: grid;
+    grid-template-columns: minmax(72px, 1fr) auto;
+    grid-auto-rows: auto;
+    align-content: start;
+
+    row-gap: 8px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    animation-duration: 150ms;
+    animation-fill-mode: both;
+}
+
+.root > * {
+    grid-column-start: 2;
+}
+
+.contentWrapper {
+    position: relative;
+    grid-column-start: 2;
+    min-width: 0;
+}
+
+.bubble {
+    border-radius: 16px;
+    background: #2a2a2a;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.actionBarWrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    padding-right: 8px;
+}
+
+.actionBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.actionEdit {
+    padding: 16px;
+}
